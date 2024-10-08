@@ -4,7 +4,7 @@
 }
 
 .options {
-    flex-basis: 24%;
+    flex-basis: 30%;
     margin: 0 2rem;
     border: 1px dashed dodgerblue;
     padding: 1rem;
@@ -15,5 +15,10 @@
 .customOrders {
     padding: 1rem 2rem;
     font-size: 1.1rem;
+}
+
+.radios {
+    display: flex;
+    flex-direction: row;
 }
 

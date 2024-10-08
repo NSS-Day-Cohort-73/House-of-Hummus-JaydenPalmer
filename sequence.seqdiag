@@ -1,0 +1,24 @@
+participant Main
+    Main ->> FoodTruck: Generate all html please
+        participant FoodTruck
+    FoodTruck->>Entrees: Generate entree options
+    Entrees-->>FoodTruck: Here are some radio buttons
+        participant Entrees
+    FoodTruck->>Vegetables: Generate vegetable options
+    Vegetables-->>FoodTruck: Here are some radio buttons
+        participant Sides
+    FoodTruck->>Sides: Generate sides options
+    Sides-->>FoodTruck: Here are some radio buttons
+        participant Vegetables
+    Entrees->>TransientState: Set TransientState to choice
+    Vegetables->>TransientState: Set TransientState to choice
+    Sides->>TransientState: Set TransientState to choice
+    TransientState->>API: Save this dinner order
+    API-->>TransientState: Order saved
+    FoodTruck->>Sales: Get order for display
+    Sales->>API: Get Order
+    API-->>Sales: Here is the order
+    FoodTruck-->>Main: Here's all the html with updated state 
+    participant API
+    participant TransientState
+    participant Sales
