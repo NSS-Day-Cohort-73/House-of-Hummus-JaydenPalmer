@@ -27,9 +27,6 @@ export const FoodTruck = async () => {
             <section class="options">
             ${vegetablesHTML}
             </section>
-
-
-
         </article>
 
         <article>

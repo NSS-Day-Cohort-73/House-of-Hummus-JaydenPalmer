@@ -56,10 +56,10 @@ sequenceDiagram
 > 🧨 Before you click the "Assessment Complete" button on the Learning Platform, add your answers below for each question and make a commit. It is your option to request a face-to-face meeting with a coach for a vocabulary review.
 
 1. Should transient state be represented in a database diagram? Why, or why not?
-   > Your answer here
+   > yes, it should. it should be showed because it is the way we store state in the api.
 2. In the **FoodTruck** module, you are **await**ing the invocataion of all of the component functions _(e.g. sales, veggie options, etc.)_. Why must you use the `await` keyword there? Explain what happens if you remove it.
-   > Your answer here
+   > as far as my understanding, without **await**ing the invocations, the code would get much more complex. the await keyword is waiting for a promise to be fufilled. without await, it will not be fufulled and will display {object promise}
 3. When the user is making choices by selecting radio buttons, explain how that data is retained so that the **Purchase Combo** button works correctly.
-   > Your answer here
+   > when the user is making choices it is stored in the transient state. then the transient state can be posted to the database with the purchase button.
 4. You used the `map()` array method in the self assessment _(at least, you should have since it is a learning objective)_. Explain why that function is helpful as a replacement for a `for..of` loop.
-   > Your answer here
+   > it is much more concise and clear as to what its objective is.
